@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const superhero_controller_1 = require("../controllers/superhero.controller");
+const router = (0, express_1.Router)();
+router.get('/', superhero_controller_1.getSuperheroes);
+router.get('/:id', superhero_controller_1.getSuperhero);
+router.delete('/:id', superhero_controller_1.deleteSuperhero);
+router.post('/', superhero_controller_1.postSuperhero);
+router.put('/:id', superhero_controller_1.putSuperhero);
+exports.default = router;
